@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="">
+	<meta name="description" content="Welcome to the website of the Flüüfff, Belgium's furry convention!">
+	<meta name="keywords" content="Furry, Convention, Belgium">
+	<meta name="author" content="Niki Roo">
+	<title>Contact</title>
+	<!--
+
+       This website was coded by:
+       Nikiroo (with VIM: VI Improved)
+                                                  _  _
+                                                 (\( \
+                                                  `.\-.)
+                              _...._            _,-"   `-.
+\                           ,"      `-._.- -.,-"       .  \
+ \`.                      ,"                               `.
+  \ `-...__              /                           .   .:  y
+   `._     ``-...__     /                           ,"```-._/
+      `-._         ```-"                      |    /_
+          `.._                   _            ;   <_ \
+              ``-.___             `.           `-._ \ \
+                     `- <           `.     (\ _/)/ `.\/
+                         \            \     `
+
+
+	-->
+	<link rel="stylesheet" type="text/css" href="style/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-fonts.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-pages.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-gallery.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-parallax.css" />
+
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<script src="style/jquery.min.js"></script>
+	<script src="style/jquery-ui/jquery-ui.min.js"></script>
+	<script src="style/bootstrap/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		function toggleNoScript() {
+			$(".script").removeClass("script");
+			$(".noscript").addClass("invisible");
+			$(".noscript-href").removeAttr("href");
+			$(".noscript-href").each(function(index, e) {
+				$(e).attr("href", $(e).attr("data-href"));
+			});
+		}
+
+		$(function() {
+			$("[data-xtype=date]").datepicker();
+			$("[data-xtype=date]").datepicker("option", "dateFormat", "yy-mm-dd");
+			$("[data-xtype=date]").datepicker("option", "changeYear", true);
+
+			if($("[data-xtype=date]").length > 0){
+				var date = $("[data-xtype=date]").attr("value").split("-");
+				// Javascript brain-dead news: month is 0-based, the rest not... yay!
+				$("[data-xtype=date]").datepicker("setDate", new Date(date[0], date[1] - 1, date[2]))
+			}
+			$(".ui-datepicker").hide();
+		});
+	</script>
+</head>
+<body onload="toggleNoScript();" class="parallax">
+	<!--
+	<div class="parallax p1"></div>
+	<div class="parallax p2"></div>
+	-->
+	<div class="dropdown main-menu">
+		<button class="dropbtn icon icon-menu"></button>
+		<div class="dropdown-content">
+			<div class="pane">
+				<a class="close-button area" href="/contact.php?lang=en"></a>
+
+				<a class="close-button X" href="/contact.php?lang=en"></a>
+
+				<img class="brand fluufff" alt="Flüüfff" src="pics/logo-dark.svg" />
+				<div class="sep"></div>
+				<a class="signup" href="register.php?lang=en">Register</a>
+				<div class="loginbox">
+					<form class="from-group" action="/contact.php?lang=en" method="post">
+						<label class="form-label dark"><p>Your email:</p> <input class="form-control dark" name="email" type="email" required="required" placeholder="Your email..." /></label>
+						<label class="form-label dark"><p>Your password:</p> <input class="form-control dark" name="password" type="password" required="required" /></label>
+						<input type="hidden" name="action" value="user"/>
+						<div class="vspace"></div>
+						<a class="reset" href="password.php?lang=en">I forgot my password</a>
+
+						<input type="submit" class="form-button max" value="Login"/>
+					</form>
+				</div>
+				<div class="sep"></div>
+				<a class="brand" href="index.php?lang=en">Home</a>
+								<a href="index.php?lang=en">Flüüfff 2018</a>
+				<a href="about.php?lang=en">About</a>
+				<a href="attendees.php?lang=en">Attendees list</a>
+				<a href="app.php?lang=en">Smartphone Application</a>
+				<a href="events.php?lang=en">Events</a>
+				<a href="hotel.php?lang=en">Hotel</a>
+				<a href="travel.php?lang=en">Travel Directions</a>
+				<a href="prices.php?lang=en">Prices</a>
+				<a href="faq.php?lang=en">FAQ</a>
+				<a href="policies.php?lang=en">Policies</a>
+				<a class=" active" href="contact.php?lang=en">Contact</a>
+				<a href="links.php?lang=en">Other conventions</a>
+			</div>
+		</div>
+	</div>
+	<div class="language">
+		<div class="choice">
+			<span class="lang current"><span data-lang="en"></span></span>
+			<a class="lang  active" href="/contact.php?lang=fr"><span data-lang='fr'>FR</span></a>
+			<a class="lang active active" href="/contact.php?lang=en"><span data-lang='en'>EN</span></a>
+			<a class="lang  active" href="/contact.php?lang=nl"><span data-lang='nl'>NL</span></a>
+		</div>
+	</div>
+	<div class="vspace"></div>
+	<div class='container main'>
+	<h1>Contact form</h1>
+	For any question or request regarding your registration or payment,
+	<br/>
+	please contact us at
+	<a href="mailto:registration@fluufff.org">registration@fluufff.org</a>
+	<br/>
+	<br/>
+	For any other question regarding the convention: 
+	<a href="mailto:contact@fluufff.org">contact@fluufff.org</a>
+	</div>
+	<div data-delete="true">&nbsp;</div>
+	<nav class="navbar footer navbar-default">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="navbar-header">
+					<a class="navbar-brand small-logo" href="index.php?lang=en"><img class="small-logo" alt="Flüüfff" src="pics/logo-light.svg" /></a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<ul class="nav navbar-nav">
+					<li><a href="https://www.corsendonkhotels.com/en/clubs/duinse-polders/">Corsendonk <span class="name">Duinse Polders</span> hotel</a></li>
+					<li><a>Blankenberge, Belgium</a></li>
+					<li><a>2nd to the 5th of November</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<ul class="nav navbar-nav">
+					<li><a href="policies.php?lang=en">Policies</a></li>
+					<li><a href="https://2018.fluufff.org/">Flüüfff 2018</a></li>					<li><a href="faq.php?lang=en">FAQ</a></li>
+					<li class="active"><a href="contact.php?lang=en">Contact</a></li>
+					<li><a href="links.php?lang=en">Other conventions</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<a href="https://twitter.com/FluufffCon"><img alt="Twitter" src="style/images/twitter.svg"></a>
+				&nbsp;&nbsp;
+				<a href="http://www.furaffinity.net/user/fluufff/"><img alt="FurAffinity" src="style/images/furaffinity.png"></a>
+				&nbsp;&nbsp;
+				<a href="https://www.facebook.com/fluufff/"><img alt="Facebook" src="style/images/facebook.svg"></a>
+				&nbsp;&nbsp;
+				<a href="https://beta.furrynetwork.com/fluufff/"><img alt="FurryNetwork" src="style/images/furrynetwork.svg"></a>
+				&nbsp;&nbsp;
+				<a href="https://web.telegram.org/#/im?p=@fluufff_announcements"><img alt="Telegram" src="style/images/telegram.png"></a>
+				<div class="vspace"></div>
+			</div>
+		</div>
+	</nav>
+</body>
+</html>
+

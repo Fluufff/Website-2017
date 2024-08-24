@@ -1,0 +1,196 @@
+/* main */
+
+.main-date {
+	display: block;
+	align-content: center;
+	text-align: center;
+	width: 600px;
+	background-color: rgba(0, 0, 0, 0.4);
+	margin-top: 200px;
+	margin-left: calc(50% - 300px);
+	border-radius: 20px;
+	padding: 20px;
+	height: 150px;
+}
+
+h1.logo {
+	display: inline;
+}
+
+h3.logo {
+	color: #7A7A7A;
+	display: inline;
+}
+
+a.noscript-href, .noscript-href a {
+	background-color: transparent !important;
+}
+
+a.noscript-href.active li, .noscript-href a.active li {
+	background-color: white;
+}
+
+/* links */
+
+.banner.text {
+	width: 100%;
+	text-align: center;
+}
+
+.banner.image {
+	height: 80px;
+	width: 200px;
+	margin-bottom: 20px;
+}
+
+.small-banner.image {
+	height: 80px;
+	margin-top: 45px;
+}
+
+.big-banner.image {
+	height: 170px;
+}
+
+/* about */
+
+.minimap {
+	width: 100%;
+}
+
+.gallery.staff .lang {
+	float: right;
+}
+
+/* profile */
+
+.ui-datepicker {
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.avatar {
+	height: 200px;
+	width: auto;
+	margin: auto;
+	display: block;
+}
+
+.bio {
+	text-align: justify;
+	font-family: monospace;
+	color: grey;
+	display: block;
+	float: left;
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+
+/* news */
+
+.newslink {
+	display: block;
+display: none;
+	width: 100%;
+	text-align: center;
+	padding-top: 40px;
+}
+
+.news .short {
+	display: none;
+}
+
+.news4 .short {
+	display: block;
+}
+
+.news4 img, .news4 .signature, .news4 .long {
+	display: none;
+}
+
+.news, .news4 {
+	text-align: justify;
+}
+
+.news_year {
+	text-align: center;
+	background-color: rgb(229, 237, 232);
+	border: 1px solid rgb(189, 197, 192);
+	border-radius: 5px;
+}
+
+.news_year h2 {
+	margin: 0;
+}
+
+/* .news:not(:nth-child(2)) .date { */
+.news .date {
+	border-top: solid grey 1px;
+	padding-top: 20px;
+}
+
+.news h4 {
+	font-size: 140%;
+}
+
+.news .authorbox {
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	display: block;
+	text-align: center;
+	width: 80px;
+}
+
+.news .authorbox .pic {
+	width: 70px;
+}
+
+.news .authorbox .signature {
+	font-size: 18px;
+	color: gray;
+	opacity: 0.2;
+}
+
+.news .authorbox:hover .signature { 
+	opacity: 1;
+	transition: opacity 0.5s;
+}
+
+.news .subnote {
+	margin-top: 40px;
+}
+
+.news .emphase {
+	font-weight: bold;
+}
+
+.news .dephase {
+	color: #888888;
+	font-style: italic;
+}
+
+.news .shout {
+	font-size: 150%;
+	color: green;
+	font-weight: bold;
+	display: inline;
+}
+
+.news .update {
+	margin-left: 20px;
+	margin-right: 20px;
+	background-color: #ffdddd;
+	border: 1px solid #dd8888;
+	clear: left;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.news .update :first-child {
+	font-weight: bold;
+	text-decoration: underline;
+	display: block;
+}
+

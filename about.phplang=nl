@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="">
+	<meta name="description" content="Welcome to the website of the Flüüfff, Belgium's furry convention!">
+	<meta name="keywords" content="Furry, Convention, Belgium">
+	<meta name="author" content="Niki Roo">
+	<title>About</title>
+	<!--
+
+       This website was coded by:
+       Nikiroo (with VIM: VI Improved)
+                                                  _  _
+                                                 (\( \
+                                                  `.\-.)
+                              _...._            _,-"   `-.
+\                           ,"      `-._.- -.,-"       .  \
+ \`.                      ,"                               `.
+  \ `-...__              /                           .   .:  y
+   `._     ``-...__     /                           ,"```-._/
+      `-._         ```-"                      |    /_
+          `.._                   _            ;   <_ \
+              ``-.___             `.           `-._ \ \
+                     `- <           `.     (\ _/)/ `.\/
+                         \            \     `
+
+
+	-->
+	<link rel="stylesheet" type="text/css" href="style/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-fonts.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-pages.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-gallery.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-parallax.css" />
+
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<script src="style/jquery.min.js"></script>
+	<script src="style/jquery-ui/jquery-ui.min.js"></script>
+	<script src="style/bootstrap/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		function toggleNoScript() {
+			$(".script").removeClass("script");
+			$(".noscript").addClass("invisible");
+			$(".noscript-href").removeAttr("href");
+			$(".noscript-href").each(function(index, e) {
+				$(e).attr("href", $(e).attr("data-href"));
+			});
+		}
+
+		$(function() {
+			$("[data-xtype=date]").datepicker();
+			$("[data-xtype=date]").datepicker("option", "dateFormat", "yy-mm-dd");
+			$("[data-xtype=date]").datepicker("option", "changeYear", true);
+
+			if($("[data-xtype=date]").length > 0){
+				var date = $("[data-xtype=date]").attr("value").split("-");
+				// Javascript brain-dead news: month is 0-based, the rest not... yay!
+				$("[data-xtype=date]").datepicker("setDate", new Date(date[0], date[1] - 1, date[2]))
+			}
+			$(".ui-datepicker").hide();
+		});
+	</script>
+</head>
+<body onload="toggleNoScript();" class="parallax">
+	<!--
+	<div class="parallax p1"></div>
+	<div class="parallax p2"></div>
+	-->
+	<div class="dropdown main-menu">
+		<button class="dropbtn icon icon-menu"></button>
+		<div class="dropdown-content">
+			<div class="pane">
+				<a class="close-button area" href="/about.php?lang=en"></a>
+
+				<a class="close-button X" href="/about.php?lang=en"></a>
+
+				<img class="brand fluufff" alt="Flüüfff" src="pics/logo-dark.svg" />
+				<div class="sep"></div>
+				<a class="signup" href="register.php?lang=en">Register</a>
+				<div class="loginbox">
+					<form class="from-group" action="/about.php?lang=en" method="post">
+						<label class="form-label dark"><p>Your email:</p> <input class="form-control dark" name="email" type="email" required="required" placeholder="Your email..." /></label>
+						<label class="form-label dark"><p>Your password:</p> <input class="form-control dark" name="password" type="password" required="required" /></label>
+						<input type="hidden" name="action" value="user"/>
+						<div class="vspace"></div>
+						<a class="reset" href="password.php?lang=en">I forgot my password</a>
+
+						<input type="submit" class="form-button max" value="Login"/>
+					</form>
+				</div>
+				<div class="sep"></div>
+				<a class="brand" href="index.php?lang=en">Home</a>
+								<a href="index.php?lang=en">Flüüfff 2018</a>
+				<a class=" active" href="about.php?lang=en">About</a>
+				<a href="attendees.php?lang=en">Attendees list</a>
+				<a href="app.php?lang=en">Smartphone Application</a>
+				<a href="events.php?lang=en">Events</a>
+				<a href="hotel.php?lang=en">Hotel</a>
+				<a href="travel.php?lang=en">Travel Directions</a>
+				<a href="prices.php?lang=en">Prices</a>
+				<a href="faq.php?lang=en">FAQ</a>
+				<a href="policies.php?lang=en">Policies</a>
+				<a href="contact.php?lang=en">Contact</a>
+				<a href="links.php?lang=en">Other conventions</a>
+			</div>
+		</div>
+	</div>
+	<div class="language">
+		<div class="choice">
+			<span class="lang current"><span data-lang="en"></span></span>
+			<a class="lang  active" href="/about.php?lang=fr"><span data-lang='fr'>FR</span></a>
+			<a class="lang active active" href="/about.php?lang=en"><span data-lang='en'>EN</span></a>
+			<a class="lang  active" href="/about.php?lang=nl"><span data-lang='nl'>NL</span></a>
+		</div>
+	</div>
+	<div class="vspace"></div>
+	<div class='container main'>
+	<h1>About</h1>
+		<div class='row'>
+			<div class='col-md-6'>
+			<h2>Flüüfff?</h2>
+			<div class="row">
+				<div class='col-md-12'>
+					It's Belgium's furry convention.
+<br/>
+An event dedicated to anthropomorphic characters and a gathering place for all furries and their friends.
+				</div>
+			</div>
+			<h2>Where can I talk with other attendees?</h2>
+			<div class="row">
+				<div class='col-md-12'>
+					Outside of our <a href='https://web.telegram.org/#/im?p=@fluufff_announcements'>official Telegram channel</a> where the Flüüfff announcements are posted, there is also a <a href='https://web.telegram.org/#/im?p=@fluufff_non_official'>Telegram discussion group</a> where you can chat and socialize online before the convention.
+				</div>
+			</div>
+			<h2>Moar News!</h2>
+			<div class="row">
+				<div class='col-md-12'>
+					Follow us on <a href='https://twitter.com/FluufffCon'>Twitter</a> &mdash; <a href='http://www.furaffinity.net/user/fluufff/'>Furaffinity</a> &mdash; <a href='https://www.facebook.com/fluufff/'>Facebook</a> &mdash; <a href='https://beta.furrynetwork.com/fluufff/'>FurryNetwork</a> and you'll never miss a single bit of info about Flüüfff!
+				</div>
+			</div>
+			<h2>Rules of conduct?</h2>
+			<div class="row">
+				<div class='col-md-12'>
+					
+	Our policies are available for all to see;
+	you can see them in the <span class='highlight'>Policies</span>
+        section.
+
+				</div>
+			</div>
+			<h2>Language?</h2>
+			<div class="row">
+				<div class='col-md-12'>
+					The official language of the convention is English.
+<br/>
+The hotel staff will be happy to help you either in Dutch, French or English.
+<br/>
+If you're not 100% at ease with English, don't worry. Please call someone from the convention Staff and we'll find someone to help you in French, Dutch or German!
+				</div>
+			</div>
+		</div>
+			<div class='col-md-6'>
+			<h2>Who's the beaver?</h2>
+			<div class="row">
+				<div class='col-md-12'>
+					He's our mascot! He's a friendly and resourceful, but a bit of a clumsy shrinking violet. Whatever materials are given to him, he'll put his mind and heart into it and try to build something nice with them.
+<br/>
+He doesn't have a name yet. Upon registration, we'll ask you to suggest one for him and a vote will be organised. A good way for you to get more involved in Flüüfff!
+				</div>
+			</div>
+			<h2>Important dates</h2>
+			<div class="row">
+				<div class='col-md-12'>
+					<span class='highlight'>25<sup>th</sup> of February 2017</span> - Registration Opens
+<br/>
+<span class='highlight'>2<sup>nd</sup> to 5<sup>th</sup> November 2017</span> - It's convention time!
+				</div>
+			</div>
+			<h2>I have several questions!</h2>
+			<div class="row">
+				<div class='col-md-12'>
+					Take a look in the <span class='highlight'>FAQ section</span> and if you don't find your answer, drop us a line at <a href='mailto:contact@fluufff.org'>contact@fluufff.org</a> &mdash; we'll get back to you.
+				</div>
+			</div>
+			<h2>Activities?</h2>
+			<div class="row">
+				<div class='col-md-12'>
+					<ul>
+		<li>Minigolf competition</li>
+		<li>Board and card games nights</li>
+		<li>Treasure hunts</li>
+		<li>Fursuit walks in the dunes</li>
+		<li>Beer making and tasting panel</li>
+		<li>… and much more to come!</li>
+	</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+  <h2>The staff</h2>
+<h3>Board of Boardies</h3>
+<div class="row"><div class="gallery staff">
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/clover.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Clover
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Clover</div>
+				<img class="avatar" src="pics/staff/clover.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/faelan.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Faelan
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Faelan</div>
+				<img class="avatar" src="pics/staff/faelan.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+	Salutations!
+	<br/>
+	Your friendly neighbourhood crimson woofle here.
+	I hail from the glorious citadel of Gent.
+	<br/>
+	I'm a friendly, extremely clumsy wuff that's always ready for a chat.
+	Feel free to poke me whenever for a hug.
+	<br/>
+	I don't bite, only occasionally <strong>awoo</strong> (I can't help it, I swear).
+	Also, if you ever get in an argument with me, just feed me some sushi, and all is well!
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/gigi.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Gigi
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Gigi</div>
+				<img class="avatar" src="pics/staff/gigi.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/kaitee.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Kai Tee
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Kai Tee</div>
+				<img class="avatar" src="pics/staff/kaitee.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	<img class='lang' width='32px' src='style/images/de.png'>
+	Another lazy tiger, taking care of your registration.
+	<br/>
+	Loves airplanes, old cars, and taking endless naps.
+	<br/>
+	<br/>
+	Oh, a red point, must catch!
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/stan.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Stan
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Stan</div>
+				<img class="avatar" src="pics/staff/stan.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	One hell of a hoppy flopper, I'm the bunny of this team!
+	<br/>
+	I live in Brussels and enjoy drawing, Belgian cuisine and good old-fashioned rock 'n' roll.
+	<br/>
+	I happen to be the convention chairman and also help here and there in the website and security teams.
+	<br/>
+	Do you want a jelly bunny?
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/tach.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Tach
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Tach</div>
+				<img class="avatar" src="pics/staff/tach.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	Hi, I'm a genetically engineered <i>Achillobator giganticus</i>! Due to some contaminations, I've got human DNA. That's crazy but do you know that human DNA make you fond of waffles, play videogames and requires you to pay taxes?
+	<br/>
+	I'm head of the ConOps, so don't worry to stop me and ask me any question during the convention.
+	<br/>
+	And don't believe the rumors. I only behead people who try to hug me when I'm not drunk enough.
+	<br/>
+	<br/>
+	Can I tell you a secret? I've got a secret identity
+	<br/>
+	♫♪ na na na na Tachgoooon ♩♪.
+
+			</div></a>
+</div></div>
+<h3>IT Team</h3>
+<div class="row"><div class="gallery staff">
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/k_mini.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Niki
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Niki</div>
+				<img class="avatar" src="pics/staff/k.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	If the website is down, it's my fault!
+	<br/><br/>
+	I'm your resident kangaroo, probably watching the coffee machine
+	somewhere near a computer...
+	<br/>
+	If you are interested in long, useless, never-ending computer
+	debates, you can ping me :)
+	<br/><br/>
+	(And if a DDR, a boardgame or some chocolate appears, don't be surprised if I suddenly pop up.)
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/kasil.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Kasil
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Kasil</div>
+				<img class="avatar" src="pics/staff/kasil.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/hiro.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Hiro Lynx
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Hiro Lynx</div>
+				<img class="avatar" src="pics/staff/hiro.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	Hi, I'm a fluffy french lynx that loves music, programming and food.
+	<br/>
+	I also sleep a lot and am made of olive oil and sloth.
+	<br/>
+	Hence the short bio.
+
+			</div></a>
+</div></div>
+<h3>Decorations</h3>
+<div class="row"><div class="gallery staff">
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/laddian.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Laddian
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Laddian</div>
+				<img class="avatar" src="pics/staff/laddian.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/lainn.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Lainn
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Lainn</div>
+				<img class="avatar" src="pics/staff/lainn.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/nobody.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Meoxie
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Meoxie</div>
+				<img class="avatar" src="pics/staff/nobody.jpg"/>
+				
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/lezari.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Vex
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Vex</div>
+				<img class="avatar" src="pics/staff/lezari.png"/>
+				
+
+			</div></a>
+</div></div>
+<h3>Bureau of Fursuit Affairs</h3>
+<div class="row"><div class="gallery staff">
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/orthank.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Orthank
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Orthank</div>
+				<img class="avatar" src="pics/staff/orthank.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	Hi, I'm the mighty tauren of Flüüfff.
+	<br/>
+	Remember, mess with the bull, you get the horns !
+	<br/>
+	<br/>
+	<span class='highlight'>*charges the red carpet*</span>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/naalik.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Naalik
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Naalik</div>
+				<img class="avatar" src="pics/staff/naalik.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+
+			</div></a>
+</div></div>
+<h3>Registration Team</h3>
+<div class="row"><div class="gallery staff">
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/kaitee.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Kai Tee
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Kai Tee</div>
+				<img class="avatar" src="pics/staff/kaitee.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	<img class='lang' width='32px' src='style/images/de.png'>
+	Another lazy tiger, taking care of your registration.
+	<br/>
+	Loves airplanes, old cars, and taking endless naps.
+	<br/>
+	Oh, a red point, must catch!
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/faelan.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Faelan
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Faelan</div>
+				<img class="avatar" src="pics/staff/faelan.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+	Salutations!
+	<br/>
+	Your friendly neighbourhood crimson woofle here.
+	I hail from the glorious citadel of Gent.
+	<br/>
+	I'm a friendly, extremely clumsy wuff that's always ready for a chat.
+	Feel free to poke me whenever for a hug.
+	<br/>
+	I don't bite, only occasionally <strong>awoo</strong> (I can't help it, I swear).
+	Also, if you ever get in an argument with me, just feed me some sushi, and all is well!
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/zepto.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Zepto
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Zepto</div>
+				<img class="avatar" src="pics/staff/zepto.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+	Yarr! Navarchus Zepto, pleased 't make'yer 'quaintance! I'm a classy, rogueish pirate of a dragon with an ever-changing accent and an acute interest in games of any kind!
+	My duties to the convention consist of greeting, security, and organizing the Dealer's Den.
+	Between puffs of pipe-smoke and (hopefully) werewolf-hunting, we might perchance share a beverage!
+
+			</div></a>
+</div></div>
+<h3>Website design &amp; Print</h3>
+<div class="row"><div class="gallery staff">
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/djahai.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Djahaï
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Djahaï</div>
+				<img class="avatar" src="pics/staff/djahai.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	Hallo! I'm from France, and I travel a lot.
+	<br/>
+	I would be pleased to meet you around a beer, or two. Maybe three.
+	<br/>
+	<br/>
+	Finally, I would be pleased to meet a beer around you.
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/k_mini.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Niki
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Niki</div>
+				<img class="avatar" src="pics/staff/k.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	If the website is down, it's my fault!
+	<br/><br/>
+	I'm your resident kangaroo, probably watching the coffee machine
+	somewhere near a computer...
+	<br/>
+	If you are interested in long, useless, never-ending computer
+	debates, you can ping me :)
+	<br/><br/>
+	(And if a DDR, a boardgame or some chocolate appears, don't be surprised if I suddenly pop up.)
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/nobody.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Meta
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Meta</div>
+				<img class="avatar" src="pics/staff/nobody.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/stan.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Stan
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Stan</div>
+				<img class="avatar" src="pics/staff/stan.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	One hell of a hoppy flopper, I'm the bunny of this team!
+	<br/>
+	I live in Brussels and enjoy drawing, Belgian cuisine and good old-fashioned rock 'n' roll.
+	<br/>
+	I happen to be the convention chairman and also help here and there in the website and security teams.
+	<br/>
+	Do you want a jelly bunny?
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/tach.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Tach
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Tach</div>
+				<img class="avatar" src="pics/staff/tach.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	Hi, I'm a genetically engineered <i>Achillobator giganticus</i>! Due to some contaminations, I've got human DNA. That's crazy but do you know that human DNA make you fond of waffles, play videogames and requires you to pay taxes?
+	<br/>
+	I'm head of the ConOps, so don't worry to stop me and ask me any question during the convention.
+	<br/>
+	And don't believe the rumors. I only behead people who try to hug me when I'm not drunk enough.
+	<br/>
+	<br/>
+	Can I tell you a secret? I've got a secret identity
+	<br/>
+	♫♪ na na na na Tachgoooon ♩♪.
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/zepto.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Zepto
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Zepto</div>
+				<img class="avatar" src="pics/staff/zepto.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+	Yarr! Navarchus Zepto, pleased 't make'yer 'quaintance! I'm a classy, rogueish pirate of a dragon with an ever-changing accent and an acute interest in games of any kind!
+	My duties to the convention consist of greeting, security, and organizing the Dealer's Den.
+	Between puffs of pipe-smoke and (hopefully) werewolf-hunting, we might perchance share a beverage!
+
+			</div></a>
+</div></div>
+<h3>Stage Crew / DJ / Night Club</h3>
+<div class="row"><div class="gallery staff">
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/star.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Star
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Star</div>
+				<img class="avatar" src="pics/staff/star.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+	Hey fluffs!
+	<br/>
+	I am StarFoxCoon or Star for short. I'm a friendly FoxCoon who loves hugs and is always willing to help out!
+	<br/>
+	I'm an audiovisual designer and engineer by profession but I also DJ and Produce music!
+	<br/>
+	And that is exactly what i'll be doing at the con too, making sure you all can party your butts off!
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/nobody.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Mythosfox
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Mythosfox</div>
+				<img class="avatar" src="pics/staff/nobody.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/tinkerfox.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Tinker-Fox
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Tinker-Fox</div>
+				<img class="avatar" src="pics/staff/tinkerfox.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+
+			</div></a>
+</div></div>
+<h3>ConOps</h3>
+<div class="row"><div class="gallery staff">
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/tach.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Tach
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Tach</div>
+				<img class="avatar" src="pics/staff/tach.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	Hi, I'm a genetically engineered <i>Achillobator giganticus</i>! Due to some contaminations, I've got human DNA. That's crazy but do you know that human DNA make you fond of waffles, play videogames and requires you to pay taxes?
+	<br/>
+	I'm head of the ConOps, so don't worry to stop me and ask me any question during the convention.
+	<br/>
+	And don't believe the rumors. I only behead people who try to hug me when I'm not drunk enough.
+	<br/>
+	<br/>
+	Can I tell you a secret? I've got a secret identity
+	<br/>
+	♫♪ na na na na Tachgoooon ♩♪.
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/anuko.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Anuko
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Anuko</div>
+				<img class="avatar" src="pics/staff/anuko.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	Hello fellow fluffies !
+	<br/>
+	I am Anuko, son of Anubis. I have been brought in your time to accomplish a quest: being considered as a god among you like my father. But instead of that, I will be joining the ConOps team to help you during the convention.
+	<br/>
+	And don't worry, I am not as serious as my father so don't hesitate to poke me and chat.
+	<br/>
+	Have a good time here at Flüüfff !
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/faelan.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Faelan
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Faelan</div>
+				<img class="avatar" src="pics/staff/faelan.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+	Salutations!
+	<br/>
+	Your friendly neighbourhood crimson woofle here.
+	I hail from the glorious citadel of Gent.
+	<br/>
+	I'm a friendly, extremely clumsy wuff that's always ready for a chat.
+	Feel free to poke me whenever for a hug.
+	<br/>
+	I don't bite, only occasionally awoo (I can't help it, I swear).
+	Also, if you ever get in an argument with me, just feed me some sushi, and all is well!
+
+			</div></a>
+</div></div>
+<h3>Bartenders</h3>
+<div class="row"><div class="gallery staff">
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/amaroq.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Amaroq
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Amaroq</div>
+				<img class="avatar" src="pics/staff/amaroq.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/desim.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Desim
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Desim</div>
+				<img class="avatar" src="pics/staff/desim.png"/>
+				
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/chmouss.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Chmouss
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Chmouss</div>
+				<img class="avatar" src="pics/staff/chmouss.png"/>
+				
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	<img class='lang' width='32px' src='style/images/en.png'>
+	Woof here! :3
+	<br/>
+	I'm a German-Shep from Belgium (I also got a fox as first fursona and a dragon :D) I'm 20 yo and I did my studies in hostellery (cook, reception, waiter, barman...).
+	<br/>
+	I like to cook, gaming, making pastries, listening music...
+	<br/>
+	I'll be your barman at the Flüüfff with great pleasure :3 I love to meet new people, so don't hesitate to talk to me ^.^
+	<br/>
+	Also I'm a fursuiter and I love hugs! <3 come give me some huggies :D
+	<br/>
+	<br/>
+	Legalize <strong>AWOO</strong>!
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/clover.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Clover
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Clover</div>
+				<img class="avatar" src="pics/staff/clover.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/faelan.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Faelan
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Faelan</div>
+				<img class="avatar" src="pics/staff/faelan.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+	Salutations!
+	<br/>
+	Your friendly neighbourhood crimson woofle here.
+	I hail from the glorious citadel of Gent.
+	<br/>
+	I'm a friendly, extremely clumsy wuff that's always ready for a chat.
+	Feel free to poke me whenever for a hug.
+	<br/>
+	I don't bite, only occasionally <strong>awoo</strong> (I can't help it, I swear).
+	Also, if you ever get in an argument with me, just feed me some sushi, and all is well!
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/hellcharm.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Hell Charm
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Hell Charm</div>
+				<img class="avatar" src="pics/staff/hellcharm.png"/>
+				
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+	<img class='lang' width='32px' src='style/images/en.png'>
+	Friendly Belgian snow leopard lady. I love to draw and make fursuits. I am a last year college student who studies digital arts and entertainment in Kortrijk.
+	You may find me running around the convention as either Hell Charm or Kelo (the koi dragon) in suit from time to time!
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/kanosint.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Kanosint
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Kanosint</div>
+				<img class="avatar" src="pics/staff/kanosint.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/kinnay.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Kinnay
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Kinnay</div>
+				<img class="avatar" src="pics/staff/kinnay.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	<img class='lang' width='32px' src='style/images/en.png'>
+	Hey there!
+	<br/>
+	I'm a 20 years old belgian furry living in Liège and studying computer graphics!
+	<br/>
+	I like a lot of stuff, but I especially like Arts (traditional and digital, movies, music and many more), computer science, video games and nature in general!
+	<br/>
+	I'll be taking care of your order at the bar and maybe having a little chat, see you there!
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/stan.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Stan
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Stan</div>
+				<img class="avatar" src="pics/staff/stan.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	One hell of a hoppy flopper, I'm the bunny of this team!
+	<br/>
+	I live in Brussels and enjoy drawing, Belgian cuisine and good old-fashioned rock 'n' roll.
+	<br/>
+	I happen to be the convention chairman and also help here and there in the website and security teams.
+	<br/>
+	Do you want a jelly bunny?
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/zannak.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Zannak
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Zannak</div>
+				<img class="avatar" src="pics/staff/zannak.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/zimica.jpg" width="128px"/>
+			</span>
+			<p class="desc">
+				Zimica
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Zimica</div>
+				<img class="avatar" src="pics/staff/zimica.jpg"/>
+				
+	<img class='lang' width='32px' src='style/images/fr.png'>
+	<img class='lang' width='32px' src='style/images/en.png'>
+	Hi! My name is what? My name is who? My name is Zimica.
+	<br/>
+	What? Expected something else? I am 18 years old and will be serving your drinks.
+	<br/>
+	I like gaming and music (especially vaporwave). Don't be afraid to talk to me! I'll be somewhere in there.
+
+			</div></a>
+</div></div>
+<h3>Dealers Den</h3>
+<div class="row"><div class="gallery staff">
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/zepto.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Zepto
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Zepto</div>
+				<img class="avatar" src="pics/staff/zepto.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/nl.png'>
+	Yarr! Navarchus Zepto, pleased 't make'yer 'quaintance! I'm a classy, rogueish pirate of a dragon with an ever-changing accent and an acute interest in games of any kind!
+	My duties to the convention consist of greeting, security, and organizing the Dealer's Den.
+	Between puffs of pipe-smoke and (hopefully) werewolf-hunting, we might perchance share a beverage!
+
+			</div></a>
+</div></div>
+<h3>Conbook</h3>
+<div class="row"><div class="gallery staff">
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/kosse.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Kosse
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Kosse</div>
+				<img class="avatar" src="pics/staff/kosse.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+
+			</div></a>
+
+			<a class="pic"><span class="img">
+				<img src="pics/staff/lainn.png" width="128px"/>
+			</span>
+			<p class="desc">
+				Lainn
+			</p></a>
+			<a class="popup container"><div class="content">
+				<div class="name">Lainn</div>
+				<img class="avatar" src="pics/staff/lainn.png"/>
+				
+	<img class='lang' width='32px' src='style/images/en.png'>
+	<img class='lang' width='32px' src='style/images/fr.png'>
+
+			</div></a>
+</div></div>
+		</div>
+	</div>
+	<div data-delete="true">&nbsp;</div>
+	<nav class="navbar footer navbar-default">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="navbar-header">
+					<a class="navbar-brand small-logo" href="index.php?lang=en"><img class="small-logo" alt="Flüüfff" src="pics/logo-light.svg" /></a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<ul class="nav navbar-nav">
+					<li><a href="https://www.corsendonkhotels.com/en/clubs/duinse-polders/">Corsendonk <span class="name">Duinse Polders</span> hotel</a></li>
+					<li><a>Blankenberge, Belgium</a></li>
+					<li><a>2nd to the 5th of November</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<ul class="nav navbar-nav">
+					<li><a href="policies.php?lang=en">Policies</a></li>
+					<li><a href="https://2018.fluufff.org/">Flüüfff 2018</a></li>					<li><a href="faq.php?lang=en">FAQ</a></li>
+					<li><a href="contact.php?lang=en">Contact</a></li>
+					<li><a href="links.php?lang=en">Other conventions</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<a href="https://twitter.com/FluufffCon"><img alt="Twitter" src="style/images/twitter.svg"></a>
+				&nbsp;&nbsp;
+				<a href="http://www.furaffinity.net/user/fluufff/"><img alt="FurAffinity" src="style/images/furaffinity.png"></a>
+				&nbsp;&nbsp;
+				<a href="https://www.facebook.com/fluufff/"><img alt="Facebook" src="style/images/facebook.svg"></a>
+				&nbsp;&nbsp;
+				<a href="https://beta.furrynetwork.com/fluufff/"><img alt="FurryNetwork" src="style/images/furrynetwork.svg"></a>
+				&nbsp;&nbsp;
+				<a href="https://web.telegram.org/#/im?p=@fluufff_announcements"><img alt="Telegram" src="style/images/telegram.png"></a>
+				<div class="vspace"></div>
+			</div>
+		</div>
+	</nav>
+</body>
+</html>
+

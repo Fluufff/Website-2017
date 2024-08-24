@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="">
+	<meta name="description" content="Welcome to the website of the Flüüfff, Belgium's furry convention!">
+	<meta name="keywords" content="Furry, Convention, Belgium">
+	<meta name="author" content="Niki Roo">
+	<title>Rules of conduct</title>
+	<!--
+
+       This website was coded by:
+       Nikiroo (with VIM: VI Improved)
+                                                  _  _
+                                                 (\( \
+                                                  `.\-.)
+                              _...._            _,-"   `-.
+\                           ,"      `-._.- -.,-"       .  \
+ \`.                      ,"                               `.
+  \ `-...__              /                           .   .:  y
+   `._     ``-...__     /                           ,"```-._/
+      `-._         ```-"                      |    /_
+          `.._                   _            ;   <_ \
+              ``-.___             `.           `-._ \ \
+                     `- <           `.     (\ _/)/ `.\/
+                         \            \     `
+
+
+	-->
+	<link rel="stylesheet" type="text/css" href="style/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-fonts.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-pages.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-gallery.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-parallax.css" />
+
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<script src="style/jquery.min.js"></script>
+	<script src="style/jquery-ui/jquery-ui.min.js"></script>
+	<script src="style/bootstrap/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		function toggleNoScript() {
+			$(".script").removeClass("script");
+			$(".noscript").addClass("invisible");
+			$(".noscript-href").removeAttr("href");
+			$(".noscript-href").each(function(index, e) {
+				$(e).attr("href", $(e).attr("data-href"));
+			});
+		}
+
+		$(function() {
+			$("[data-xtype=date]").datepicker();
+			$("[data-xtype=date]").datepicker("option", "dateFormat", "yy-mm-dd");
+			$("[data-xtype=date]").datepicker("option", "changeYear", true);
+
+			if($("[data-xtype=date]").length > 0){
+				var date = $("[data-xtype=date]").attr("value").split("-");
+				// Javascript brain-dead news: month is 0-based, the rest not... yay!
+				$("[data-xtype=date]").datepicker("setDate", new Date(date[0], date[1] - 1, date[2]))
+			}
+			$(".ui-datepicker").hide();
+		});
+	</script>
+</head>
+<body onload="toggleNoScript();" class="parallax">
+	<!--
+	<div class="parallax p1"></div>
+	<div class="parallax p2"></div>
+	-->
+	<div class="dropdown main-menu">
+		<button class="dropbtn icon icon-menu"></button>
+		<div class="dropdown-content">
+			<div class="pane">
+				<a class="close-button area" href="/rules.php?lang=en"></a>
+
+				<a class="close-button X" href="/rules.php?lang=en"></a>
+
+				<img class="brand fluufff" alt="Flüüfff" src="pics/logo-dark.svg" />
+				<div class="sep"></div>
+				<a class="signup" href="register.php?lang=en">Register</a>
+				<div class="loginbox">
+					<form class="from-group" action="/rules.php?lang=en" method="post">
+						<label class="form-label dark"><p>Your email:</p> <input class="form-control dark" name="email" type="email" required="required" placeholder="Your email..." /></label>
+						<label class="form-label dark"><p>Your password:</p> <input class="form-control dark" name="password" type="password" required="required" /></label>
+						<input type="hidden" name="action" value="user"/>
+						<div class="vspace"></div>
+						<a class="reset" href="password.php?lang=en">I forgot my password</a>
+
+						<input type="submit" class="form-button max" value="Login"/>
+					</form>
+				</div>
+				<div class="sep"></div>
+				<a class="brand" href="index.php?lang=en">Home</a>
+								<a href="index.php?lang=en">Flüüfff 2018</a>
+				<a href="about.php?lang=en">About</a>
+				<a href="attendees.php?lang=en">Attendees list</a>
+				<a href="app.php?lang=en">Smartphone Application</a>
+				<a href="events.php?lang=en">Events</a>
+				<a href="hotel.php?lang=en">Hotel</a>
+				<a href="travel.php?lang=en">Travel Directions</a>
+				<a href="prices.php?lang=en">Prices</a>
+				<a href="faq.php?lang=en">FAQ</a>
+				<a href="policies.php?lang=en">Policies</a>
+				<a href="contact.php?lang=en">Contact</a>
+				<a href="links.php?lang=en">Other conventions</a>
+			</div>
+		</div>
+	</div>
+	<div class="language">
+		<div class="choice">
+			<span class="lang current"><span data-lang="en"></span></span>
+			<a class="lang  active" href="/rules.php?lang=fr"><span data-lang='fr'>FR</span></a>
+			<a class="lang active active" href="/rules.php?lang=en"><span data-lang='en'>EN</span></a>
+			<a class="lang  active" href="/rules.php?lang=nl"><span data-lang='nl'>NL</span></a>
+		</div>
+	</div>
+	<div class="vspace"></div>
+	<div class='container main'>
+
+	<h1>Rules of conduct</h1>
+
+	These rules and conditions apply to all attendees of the convention.
+	Flüüfff likes to present itself as a professional convention of friendly, respectful, and open-minded members of the furry community and their friends. To avoid any misunderstandings about what kind of behaviour is generally acceptable at an event like Flüüfff, you are expected to follow these rules. Please make sure that you read and understand them. Also keep in mind that these rules are in effect during the whole convention time, including possible early arrival and late departure days.
+
+	<h2>Registration and Badges</h2>
+	<ul>
+		<li>You must be at least 18 years old at the first day of the convention</li>
+		<li>Only registered attendees with an official convention badge from the current year may enter the convention space</li>
+		<li>You are required to wear your convention badge prominently at all times, so you can be identified as an attendee of the convention</li>
+		<li>Attending without a valid convention badge or impersonating another attendee by using their convention badge is not permitted</li>
+		<li>You may not impersonate official convention roles, e.g., by wearing lanyard colours corresponding to Staff, Crew, or Security</li>
+		<li>Changing or covering up any information on your badge (e.g., by using stickers or drawings) is strictly forbidden</li>
+		<li>Staying overnight in the hotel without a valid hotel booking (“ghosting”) is not allowed</li>
+		<li>Facilitating either ghosting or attendance without a valid badge is not permitted</li>
+		<li>If you have lost your room key, please contact the hotel front desk or Flüüfff registration immediately. Flüüfff does not accept any liability resulting from lost room keys</li>
+	</ul>
+
+	<h2>General Behaviour</h2>
+	<ul>
+		<li>Appropriate behaviour is expected at all times</li>
+		<li>Please treat others respectfully</li>
+		<li>If someone asks you to stop, then STOP. If you are asked to leave them alone, then LEAVE. There is NO discussion</li>
+		<li>It should go without saying that some people reserve any kind of physical contact to their close friends and family only. If you are not sure somebody wants to be hugged, tackled, pounced, or otherwise assaulted, please ask the person first</li>
+		<li>You are liable for any damage you may cause to the property of another attendee or to property of the convention or hotel</li>
+	</ul>
+
+	<h2>Fursuiting</h2>
+	<ul>
+		<li>Please don’t ruin the magic! Keep your fursuit head on in the lobby and in all public spaces when fursuiting (emergencies are always exempted from this rule)</li>
+		<li>Treat fursuiters carefully, in order not to damage the costume or the person inside of it</li>
+	</ul>
+
+	<h2>Clothing and Decency</h2>
+	Flüüfff wants to be as tolerant and welcoming as possible towards all attendees. This means we wish to be as permissive as possible, as long as this does not cause offense among other attendees and people who share the public spaces. We are also more likely to be more permissive in our judgements in the evenings and at night, as opposed to during office hours.
+
+	<ul>
+		<li>Wearing costumes, accessories, or displaying items made out of real fur is not allowed</li>
+		<li>The display of any kind of offensive symbols is prohibited</li>
+		<li>Nudity exceeding the equivalent of non-thong swimwear is not allowed in public</li>
+		<li>Anatomically correct costumes, furry or otherwise, must be clothed as above</li>
+		<li>Sexual behaviour that goes beyond a mere display of affection is not allowed in public</li>
+		<li>Display of adult-themed materials is not permitted in public areas of the hotel. This includes (but is not limited to): room signs, flyers, business cards, posters, and drawings on public message boards</li>
+		<li>Exposure of fetish gear is not permitted in public, even if it is part of a costume</li>
+		<li>No body paint is allowed during the dances, except for smear-safe face makeup. Please ask registration staff for permission to wear any other kind of body paint</li>
+		<li>Use common sense in public areas. Any item of clothing, apparel, or similar items which are likely to bring the convention and/or fandom into disrepute must not be worn in public. If you have to ask or think twice about doing something in public, take it to your room</li>
+		<li>Convention staff reserves the right to determine whether any clothing and/or accessories contravene these rules. Questions regarding rules for clothing and outfits should be directed to the head of registration</li>
+	</ul>
+
+	<h2>Alcohol and Drugs</h2>
+	<ul>
+		<li>You are expected to drink responsibly. You will be held liable for what you say and what you do, even if intoxicated</li>
+		<li>Persons who are intoxicated to the point of incapacitation may be escorted to their rooms. If this happens on more than one occasion, other sanctions may be imposed</li>
+		<li>Smoking and vaping (e.g., electronic cigarettes) are not permitted anywhere within the hotel building, including the hotel rooms. A considerable cleaning fee will be charged for smoking or vaping</li>
+		<li>It is not permitted to consume alcohol purchased outside of the hotel anywhere on premises, except in private hotel rooms</li>
+		<li>The possession, consumption, or sale of illegal substances will not be tolerated. The same applies to the abuse of any other substances as a drug</li>
+	</ul>
+
+	<h2>General Hotel Rules</h2>
+	<ul>
+		<li>The consumption of food or drinks purchased from outside of the hotel is not permitted, except in your private hotel room</li>
+		<li>For the safety of all hotel guests, no reckless behaviour is permitted. Please be especially careful if you have consumed alcohol</li>
+		<li>Attendees may not enter the service areas of the hotel. This includes all backstage areas, service elevators, the rooftops, emergency exits, and all areas marked as “Staff Only”</li>
+		<li>Tampering with any fire-protection devices – in particular, abusive triggering of fire doors or alarms – is prohibited and will have serious consequences. The same goes for disabling smoke detectors</li>
+		<li>Do not deliberately crack open glow sticks or similar items, i.e., anything containing dyeing, sticky, or corrosive material</li>
+	</ul>
+
+	<h2>Hotel Rooms and Privacy</h2>
+	<ul>
+		<li>You are expected to treat the hotel rooms and property of the hotel reasonably and with care. You will be held personally liable for any damage you cause</li>
+		<li>The cleaning crew is required to check your room at least once a day</li>
+		<li>Leaving a tip instead of a mess would certainly be held in a much higher regard</li>
+		<li>You are required to ask your roommates for permission before running a room party or inviting guests</li>
+		<li>You may not disturb people in any other hotel rooms. Please keep the noise down after midnight</li>
+	</ul>
+	
+	<a name="weapons"></a>
+	<h2>Weapons, Look-Alikes, and Dangerous Items</h2>
+	<ul>
+		<li>Please be aware of the strict Belgian weapons laws and that even look-alike weapons may be problematic</li>
+		<li>All weapons, including look-alikes, replicas, tools, and toys must be approved by the Head of Registration immediately following your registration on site</li>
+		<li>Water guns, nerf guns, and similar items are prohibited inside the buildings, except at designated locations and times for specific events, pre-approved in writing by our events department. Contact the events department well in advance if you wish to arrange an event involving these items. Such events are evaluated on a case-by-case basis. Even outside, care should be taken to avoid hitting any bystanders and/or damaging anyone's property</li>
+		<li>Mock fights, swordplay, fire breathing, or any other activities that may adversely affect bystanders or hotel property are not allowed without explicit permission by the Head of Registration</li>
+		<li>The Head of Registration may require your weapon to be peace-bound. Tampering with the peace-bonding is not allowed</li>
+	</ul>
+
+	<h2>Commercial Activity</h2>
+	<ul>
+		<li>All commercial activity at Flüüfff, including Artists’ Alley / Dealers' Den, is subject to the rules described here</li>
+		<li>The head of the Dealers’ Den has the final say on all matters that pertain to commercial activity at Flüüfff, inside and outside the Artists’ Alley / Dealers' Den</li>
+	</ul>
+
+	<a name="pictures"></a>
+	<h2>Photography and Video</h2>
+	<ul>
+		<li>By doing photography and videography at Flüüfff you grant us the rights to use your work in connection with our event. Footage from private rooms is exempt</li>
+		<li>Flüüfff grants you the right to use videos and photos you have taken at the convention for private and/or non-commercial purposes only</li>
+		<li>Publication in for-profit media (such as press, television, or other commercial mass media) requires written permission by the Convention Board</li>
+		<li>Official Flüüfff camera teams may record video and take photos in the public areas of the convention and during events to be used in various publications. By attending the convention, you agree that videos and pictures taken of you may be used in such publications without release or compensation. A release will only be required for material acquired in situations where a reasonable expectation of privacy exists</li>
+		<li>Photographing in the Dealers’ Den, Artists’ Alley, and Art Show is prohibited. Cameras are not permitted at all in the Art Show</li>
+		<li>Other restrictions or rules may apply for certain events, and will be announced on location</li>
+	</ul>
+
+	<h2>Pets and Animals</h2>
+	<ul>
+		<li>Unfortunately the hotel doesn’t allow pets. Only service dogs are allowed at Flüüfff, and you are required to notify registration prior to the convention</li>
+		<li>Having a service dog in your room might incur extra cleaning fees</li>
+	</ul>
+
+	<h2>The Bottom Line</h2>
+	<ul>
+		<li>When in doubt, please ask – preferably before the convention starts. We will gladly answer all your questions</li>
+		<li>These rules will not be debated during the convention. The Head of Registration will, however, be available for you in case you feel you have been incorrectly or wrongly accused of violating any of the rules. Decisions by the Head of Registration or the Convention Board are final</li>
+		<li>The Head of Registration reserves the right to impose any and all sanctions against violators of these rules or those persons involved in any other unacceptable behaviour. The definition of unacceptable behaviour remains at the sole discretion of the Head of Registration and the Convention Board</li>
+		<li>Sanctions for violating the rules may range from a friendly reminder to a permanent ban from the convention</li>
+		<li>If you have any problems with other attendees or Staff/Crew, please contact Registration or one of the Board members (these are listed on the public webpage)</li>
+	</ul>
+
+	Please contact <a href="registration@fluufff.org">registration@fluufff.org</a> for all inquiries regarding our policies and terms and conditions
+	We hope you will have a great time!
+
+	</div>
+	<div data-delete="true">&nbsp;</div>
+	<nav class="navbar footer navbar-default">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="navbar-header">
+					<a class="navbar-brand small-logo" href="index.php?lang=en"><img class="small-logo" alt="Flüüfff" src="pics/logo-light.svg" /></a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<ul class="nav navbar-nav">
+					<li><a href="https://www.corsendonkhotels.com/en/clubs/duinse-polders/">Corsendonk <span class="name">Duinse Polders</span> hotel</a></li>
+					<li><a>Blankenberge, Belgium</a></li>
+					<li><a>2nd to the 5th of November</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<ul class="nav navbar-nav">
+					<li><a href="policies.php?lang=en">Policies</a></li>
+					<li><a href="https://2018.fluufff.org/">Flüüfff 2018</a></li>					<li><a href="faq.php?lang=en">FAQ</a></li>
+					<li><a href="contact.php?lang=en">Contact</a></li>
+					<li><a href="links.php?lang=en">Other conventions</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<a href="https://twitter.com/FluufffCon"><img alt="Twitter" src="style/images/twitter.svg"></a>
+				&nbsp;&nbsp;
+				<a href="http://www.furaffinity.net/user/fluufff/"><img alt="FurAffinity" src="style/images/furaffinity.png"></a>
+				&nbsp;&nbsp;
+				<a href="https://www.facebook.com/fluufff/"><img alt="Facebook" src="style/images/facebook.svg"></a>
+				&nbsp;&nbsp;
+				<a href="https://beta.furrynetwork.com/fluufff/"><img alt="FurryNetwork" src="style/images/furrynetwork.svg"></a>
+				&nbsp;&nbsp;
+				<a href="https://web.telegram.org/#/im?p=@fluufff_announcements"><img alt="Telegram" src="style/images/telegram.png"></a>
+				<div class="vspace"></div>
+			</div>
+		</div>
+	</nav>
+</body>
+</html>

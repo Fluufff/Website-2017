@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="">
+	<meta name="description" content="Welcome to the website of the Flüüfff, Belgium's furry convention!">
+	<meta name="keywords" content="Furry, Convention, Belgium">
+	<meta name="author" content="Niki Roo">
+	<title>Attendees list</title>
+	<!--
+
+       This website was coded by:
+       Nikiroo (with VIM: VI Improved)
+                                                  _  _
+                                                 (\( \
+                                                  `.\-.)
+                              _...._            _,-"   `-.
+\                           ,"      `-._.- -.,-"       .  \
+ \`.                      ,"                               `.
+  \ `-...__              /                           .   .:  y
+   `._     ``-...__     /                           ,"```-._/
+      `-._         ```-"                      |    /_
+          `.._                   _            ;   <_ \
+              ``-.___             `.           `-._ \ \
+                     `- <           `.     (\ _/)/ `.\/
+                         \            \     `
+
+
+	-->
+	<link rel="stylesheet" type="text/css" href="style/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-fonts.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-pages.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-gallery.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-parallax.css" />
+	<link rel="stylesheet" type="text/css" href="style/style_attendees.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<script src="style/jquery.min.js"></script>
+	<script src="style/jquery-ui/jquery-ui.min.js"></script>
+	<script src="style/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/attendees.js"></script>
+	<script type="text/javascript">
+		function toggleNoScript() {
+			$(".script").removeClass("script");
+			$(".noscript").addClass("invisible");
+			$(".noscript-href").removeAttr("href");
+			$(".noscript-href").each(function(index, e) {
+				$(e).attr("href", $(e).attr("data-href"));
+			});
+		}
+
+		$(function() {
+			$("[data-xtype=date]").datepicker();
+			$("[data-xtype=date]").datepicker("option", "dateFormat", "yy-mm-dd");
+			$("[data-xtype=date]").datepicker("option", "changeYear", true);
+
+			if($("[data-xtype=date]").length > 0){
+				var date = $("[data-xtype=date]").attr("value").split("-");
+				// Javascript brain-dead news: month is 0-based, the rest not... yay!
+				$("[data-xtype=date]").datepicker("setDate", new Date(date[0], date[1] - 1, date[2]))
+			}
+			$(".ui-datepicker").hide();
+		});
+	</script>
+</head>
+<body onload="toggleNoScript();" class="parallax">
+	<!--
+	<div class="parallax p1"></div>
+	<div class="parallax p2"></div>
+	-->
+	<div class="dropdown main-menu">
+		<button class="dropbtn icon icon-menu"></button>
+		<div class="dropdown-content">
+			<div class="pane">
+				<a class="close-button area" href="/attendees.php?lang=en"></a>
+
+				<a class="close-button X" href="/attendees.php?lang=en"></a>
+
+				<img class="brand fluufff" alt="Flüüfff" src="pics/logo-dark.svg" />
+				<div class="sep"></div>
+				<a class="signup" href="register.php?lang=en">Register</a>
+				<div class="loginbox">
+					<form class="from-group" action="/attendees.php?lang=en" method="post">
+						<label class="form-label dark"><p>Your email:</p> <input class="form-control dark" name="email" type="email" required="required" placeholder="Your email..." /></label>
+						<label class="form-label dark"><p>Your password:</p> <input class="form-control dark" name="password" type="password" required="required" /></label>
+						<input type="hidden" name="action" value="user"/>
+						<div class="vspace"></div>
+						<a class="reset" href="password.php?lang=en">I forgot my password</a>
+
+						<input type="submit" class="form-button max" value="Login"/>
+					</form>
+				</div>
+				<div class="sep"></div>
+				<a class="brand" href="index.php?lang=en">Home</a>
+								<a href="index.php?lang=en">Flüüfff 2018</a>
+				<a href="about.php?lang=en">About</a>
+				<a class=" active" href="attendees.php?lang=en">Attendees list</a>
+				<a href="app.php?lang=en">Smartphone Application</a>
+				<a href="events.php?lang=en">Events</a>
+				<a href="hotel.php?lang=en">Hotel</a>
+				<a href="travel.php?lang=en">Travel Directions</a>
+				<a href="prices.php?lang=en">Prices</a>
+				<a href="faq.php?lang=en">FAQ</a>
+				<a href="policies.php?lang=en">Policies</a>
+				<a href="contact.php?lang=en">Contact</a>
+				<a href="links.php?lang=en">Other conventions</a>
+			</div>
+		</div>
+	</div>
+	<div class="language">
+		<div class="choice">
+			<span class="lang current"><span data-lang="en"></span></span>
+			<a class="lang  active" href="/attendees.php?lang=fr"><span data-lang='fr'>FR</span></a>
+			<a class="lang active active" href="/attendees.php?lang=en"><span data-lang='en'>EN</span></a>
+			<a class="lang  active" href="/attendees.php?lang=nl"><span data-lang='nl'>NL</span></a>
+		</div>
+	</div>
+	<div class="vspace"></div>
+	<div class='container main'>
+
+<h1>Attendees list</h1>
+<div id="attendee-filters">
+</div>
+<div class="attendeesList">
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/1.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">[No name]</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/2.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">[No name]</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/3.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Amaroq </div>
+	</div>
+		<div class="attendee staff">
+		<div class="images">
+			<img class="av" src="avatars/4.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Anuko</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/5.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Ardagan Bao</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/6.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Auroz</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/7.jpg">
+			<img class="country ico" 
+				title="Great Britain" 
+				alt="GB" 
+				src="pics/country/gb.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Azreth</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="style/images/nobody.jpg">
+			<img class="country ico" 
+				title="Russia" 
+				alt="RU" 
+				src="pics/country/ru.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Bazil</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/9.jpg">
+			<img class="country ico" 
+				title="Germany" 
+				alt="DE" 
+				src="pics/country/de.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Cambaru</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/10.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Choob</div>
+	</div>
+		<div class="attendee sponsor staff">
+		<div class="images">
+			<img class="av" src="avatars/11.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Clover</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/12.jpg">
+			<img class="country ico" 
+				title="Sweden" 
+				alt="SE" 
+				src="pics/country/se.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Dalyon</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/13.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Damien</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/14.jpg">
+			<img class="country ico" 
+				title="Germany" 
+				alt="DE" 
+				src="pics/country/de.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">DASPRiD</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/15.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Dawn</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/16.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Dazel</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/17.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Desim Angefox</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/18.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Don Nut</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="style/images/nobody.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Elystra</div>
+	</div>
+		<div class="attendee fursuiter sponsor staff">
+		<div class="images">
+			<img class="av" src="avatars/20.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Faelan</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/21.jpg">
+			<img class="country ico" 
+				title="Switzerland" 
+				alt="CH" 
+				src="pics/country/ch.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Fafnir</div>
+	</div>
+		<div class="attendee fursuiter sponsor staff">
+		<div class="images">
+			<img class="av" src="avatars/22.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">FÃ©lix RÃªverie</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/23.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Felinar</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/24.jpg">
+			<img class="country ico" 
+				title="Finland" 
+				alt="FI" 
+				src="pics/country/fi.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Ferrite</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/25.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Fideel</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/26.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Floere T. Pillowcase</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/27.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Fluvus</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/28.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Fog</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/29.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">FoxiesCuties</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/30.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Frago</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/31.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Furexa</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/32.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Ganache</div>
+	</div>
+		<div class="attendee fursuiter sponsor staff">
+		<div class="images">
+			<img class="av" src="avatars/33.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Gigi</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/34.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Gmorkh</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/35.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Goldy</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="style/images/nobody.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Grey Jackal</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/37.jpg">
+			<img class="country ico" 
+				title="Switzerland" 
+				alt="CH" 
+				src="pics/country/ch.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Grif</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/38.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Habaxin</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/39.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Harvey</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/40.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Hell Charm</div>
+	</div>
+		<div class="attendee staff">
+		<div class="images">
+			<img class="av" src="avatars/41.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Hiro</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/42.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">inuga</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/43.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Irinae</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/44.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Jenky</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/45.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Joey Santiano</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/46.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Jona</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/47.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Kagemaru</div>
+	</div>
+		<div class="attendee fursuiter sponsor staff">
+		<div class="images">
+			<img class="av" src="avatars/48.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Kai Tee</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/49.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Kanosint</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="style/images/nobody.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Karel_Luyten</div>
+	</div>
+		<div class="attendee sponsor staff">
+		<div class="images">
+			<img class="av" src="avatars/51.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Kasil</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="style/images/nobody.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Katiu</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/53.jpg">
+			<img class="country ico" 
+				title="Germany" 
+				alt="DE" 
+				src="pics/country/de.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Kauri Kakarauri</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/54.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Kosse</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="style/images/nobody.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Kuro</div>
+	</div>
+		<div class="attendee fursuiter staff">
+		<div class="images">
+			<img class="av" src="avatars/56.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Laddian</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/57.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Lainn</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/58.jpg">
+			<img class="country ico" 
+				title="Netherlands" 
+				alt="NL" 
+				src="pics/country/nl.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Leith</div>
+	</div>
+		<div class="attendee staff">
+		<div class="images">
+			<img class="av" src="avatars/59.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Lezari</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/60.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Luciole</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/61.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Luna</div>
+	</div>
+		<div class="attendee staff">
+		<div class="images">
+			<img class="av" src="avatars/62.jpg">
+			<img class="country ico" 
+				title="Germany" 
+				alt="DE" 
+				src="pics/country/de.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Meoxie</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/63.jpg">
+			<img class="country ico" 
+				title="Canada" 
+				alt="CA" 
+				src="pics/country/ca.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Meta_D</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/64.jpg">
+			<img class="country ico" 
+				title="Germany" 
+				alt="DE" 
+				src="pics/country/de.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Midnight Flow</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/65.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Mikwaw</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/66.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Milo'clock</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/67.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Mlice</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/68.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Naalik</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/69.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Narf</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/70.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">NEEKY</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/71.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Niesh</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/72.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">nightwoof</div>
+	</div>
+		<div class="attendee sponsor staff">
+		<div class="images">
+			<img class="av" src="avatars/73.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Niki</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="style/images/nobody.jpg">
+			<img class="country ico" 
+				title="Netherlands" 
+				alt="NL" 
+				src="pics/country/nl.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Nimalen</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="style/images/nobody.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Ooogie</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/76.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">OreoTheBorg</div>
+	</div>
+		<div class="attendee fursuiter staff">
+		<div class="images">
+			<img class="av" src="avatars/77.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Orthank</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/78.jpg">
+			<img class="country ico" 
+				title="Russia" 
+				alt="RU" 
+				src="pics/country/ru.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Pinguinolog</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/79.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Purplefur</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="style/images/nobody.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">RainbowHusky</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/81.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Rakipu</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/82.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Raven</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/83.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Ray Bleiz</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/84.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Rox</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/85.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">sÃ©ritiale</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/86.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Shoelace</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/87.jpg">
+			<img class="country ico" 
+				title="Germany" 
+				alt="DE" 
+				src="pics/country/de.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Silicon</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/88.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Silverflame</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/89.jpg">
+			<img class="country ico" 
+				title="Canada" 
+				alt="CA" 
+				src="pics/country/ca.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Snarl</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="style/images/nobody.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Sodalite</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/91.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">SPRING</div>
+	</div>
+		<div class="attendee fursuiter sponsor staff">
+		<div class="images">
+			<img class="av" src="avatars/92.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">StanLuckBun</div>
+	</div>
+		<div class="attendee fursuiter staff">
+		<div class="images">
+			<img class="av" src="avatars/93.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">StarFoxCoon</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/94.jpg">
+			<img class="country ico" 
+				title="Ireland" 
+				alt="IE" 
+				src="pics/country/ie.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Sundance</div>
+	</div>
+		<div class="attendee fursuiter sponsor staff">
+		<div class="images">
+			<img class="av" src="avatars/95.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Tach</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/96.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Tanugris</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/97.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Tinker-Fox</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/98.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Toxicoow</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/99.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">vrydi</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/100.jpg">
+			<img class="country ico" 
+				title="Netherlands" 
+				alt="NL" 
+				src="pics/country/nl.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Waveon</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/101.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Wikke</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/102.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Wintie</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/103.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Wolfelin</div>
+	</div>
+		<div class="attendee fursuiter sponsor">
+		<div class="images">
+			<img class="av" src="avatars/104.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Yuki</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/105.jpg">
+			<img class="country ico" 
+				title="France" 
+				alt="FR" 
+				src="pics/country/fr.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Yulynh</div>
+	</div>
+		<div class="attendee fursuiter">
+		<div class="images">
+			<img class="av" src="avatars/106.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Zannak</div>
+	</div>
+		<div class="attendee sponsor">
+		<div class="images">
+			<img class="av" src="avatars/107.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Zelts Elis</div>
+	</div>
+		<div class="attendee staff">
+		<div class="images">
+			<img class="av" src="avatars/108.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Zepto</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/109.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Ziggy</div>
+	</div>
+		<div class="attendee">
+		<div class="images">
+			<img class="av" src="avatars/110.jpg">
+			<img class="country ico" 
+				title="Belgium" 
+				alt="BE" 
+				src="pics/country/be.svg"
+			>
+			<img class="fursuit ico" title="Fursuiter" src="pics/fox.svg">
+			<img class="bonus ico" title="Staff" src="pics/queen-crown.svg">
+		</div>
+		<div class="nick">Zimica</div>
+	</div>
+</div>
+
+	</div>
+	<div data-delete="true">&nbsp;</div>
+	<nav class="navbar footer navbar-default">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="navbar-header">
+					<a class="navbar-brand small-logo" href="index.php?lang=en"><img class="small-logo" alt="Flüüfff" src="pics/logo-light.svg" /></a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<ul class="nav navbar-nav">
+					<li><a href="https://www.corsendonkhotels.com/en/clubs/duinse-polders/">Corsendonk <span class="name">Duinse Polders</span> hotel</a></li>
+					<li><a>Blankenberge, Belgium</a></li>
+					<li><a>2nd to the 5th of November</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<ul class="nav navbar-nav">
+					<li><a href="policies.php?lang=en">Policies</a></li>
+					<li><a href="https://2018.fluufff.org/">Flüüfff 2018</a></li>					<li><a href="faq.php?lang=en">FAQ</a></li>
+					<li><a href="contact.php?lang=en">Contact</a></li>
+					<li><a href="links.php?lang=en">Other conventions</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<a href="https://twitter.com/FluufffCon"><img alt="Twitter" src="style/images/twitter.svg"></a>
+				&nbsp;&nbsp;
+				<a href="http://www.furaffinity.net/user/fluufff/"><img alt="FurAffinity" src="style/images/furaffinity.png"></a>
+				&nbsp;&nbsp;
+				<a href="https://www.facebook.com/fluufff/"><img alt="Facebook" src="style/images/facebook.svg"></a>
+				&nbsp;&nbsp;
+				<a href="https://beta.furrynetwork.com/fluufff/"><img alt="FurryNetwork" src="style/images/furrynetwork.svg"></a>
+				&nbsp;&nbsp;
+				<a href="https://web.telegram.org/#/im?p=@fluufff_announcements"><img alt="Telegram" src="style/images/telegram.png"></a>
+				<div class="vspace"></div>
+			</div>
+		</div>
+	</nav>
+</body>
+</html>
+

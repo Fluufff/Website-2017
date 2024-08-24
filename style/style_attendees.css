@@ -1,0 +1,12 @@
+.attendeesList{ }
+.attendee{ min-height: 200px; margin-top: 10px; margin-right: 10px; float:left; width:128px; background:#2f862f; color:whitesmoke; }
+.attendee.sponsor{background:#ceae3a; }
+.attendee.staff{ }
+.attendee .fursuit, .attendee .sponsor{display:none;}
+.attendee .images{ position:relative; overflow: hidden; float:left; width:128px; height:128px;  }
+	.attendee .images .av{ z-index: 1; max-width:128px; height:128px; display:block; margin: 0 auto;  }
+	.attendee .images .country{  top:0; right:0; }
+	.attendee.fursuiter .images .ico.fursuit{ display:block; bottom:0; right:0; }
+	.attendee.staff .images .ico.bonus{ display:block; bottom:0; left:0; }
+	.attendee .images .ico{position: absolute; z-index: 2; width:18px; height:18px;}
+.attendee .nick{ clear:both; padding: 5px; word-wrap: break-word; font-size: 0.8em; text-align:center; }

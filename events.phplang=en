@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="">
+	<meta name="description" content="Welcome to the website of the Flüüfff, Belgium's furry convention!">
+	<meta name="keywords" content="Furry, Convention, Belgium">
+	<meta name="author" content="Niki Roo">
+	<title>Events</title>
+	<!--
+
+       This website was coded by:
+       Nikiroo (with VIM: VI Improved)
+                                                  _  _
+                                                 (\( \
+                                                  `.\-.)
+                              _...._            _,-"   `-.
+\                           ,"      `-._.- -.,-"       .  \
+ \`.                      ,"                               `.
+  \ `-...__              /                           .   .:  y
+   `._     ``-...__     /                           ,"```-._/
+      `-._         ```-"                      |    /_
+          `.._                   _            ;   <_ \
+              ``-.___             `.           `-._ \ \
+                     `- <           `.     (\ _/)/ `.\/
+                         \            \     `
+
+
+	-->
+	<link rel="stylesheet" type="text/css" href="style/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-fonts.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-pages.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-gallery.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-parallax.css" />
+	<link rel="stylesheet" type="text/css" href="style/style-events.css" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="icon" type="image/png" href="favicon.png" />
+	<script src="style/jquery.min.js"></script>
+	<script src="style/jquery-ui/jquery-ui.min.js"></script>
+	<script src="style/bootstrap/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+		function toggleNoScript() {
+			$(".script").removeClass("script");
+			$(".noscript").addClass("invisible");
+			$(".noscript-href").removeAttr("href");
+			$(".noscript-href").each(function(index, e) {
+				$(e).attr("href", $(e).attr("data-href"));
+			});
+		}
+
+		$(function() {
+			$("[data-xtype=date]").datepicker();
+			$("[data-xtype=date]").datepicker("option", "dateFormat", "yy-mm-dd");
+			$("[data-xtype=date]").datepicker("option", "changeYear", true);
+
+			if($("[data-xtype=date]").length > 0){
+				var date = $("[data-xtype=date]").attr("value").split("-");
+				// Javascript brain-dead news: month is 0-based, the rest not... yay!
+				$("[data-xtype=date]").datepicker("setDate", new Date(date[0], date[1] - 1, date[2]))
+			}
+			$(".ui-datepicker").hide();
+		});
+	</script>
+</head>
+<body onload="toggleNoScript();" class="parallax">
+	<!--
+	<div class="parallax p1"></div>
+	<div class="parallax p2"></div>
+	-->
+	<div class="dropdown main-menu">
+		<button class="dropbtn icon icon-menu"></button>
+		<div class="dropdown-content">
+			<div class="pane">
+				<a class="close-button area" href="/events.php?lang=en"></a>
+
+				<a class="close-button X" href="/events.php?lang=en"></a>
+
+				<img class="brand fluufff" alt="Flüüfff" src="pics/logo-dark.svg" />
+				<div class="sep"></div>
+				<a class="signup" href="register.php?lang=en">Register</a>
+				<div class="loginbox">
+					<form class="from-group" action="/events.php?lang=en" method="post">
+						<label class="form-label dark"><p>Your email:</p> <input class="form-control dark" name="email" type="email" required="required" placeholder="Your email..." /></label>
+						<label class="form-label dark"><p>Your password:</p> <input class="form-control dark" name="password" type="password" required="required" /></label>
+						<input type="hidden" name="action" value="user"/>
+						<div class="vspace"></div>
+						<a class="reset" href="password.php?lang=en">I forgot my password</a>
+
+						<input type="submit" class="form-button max" value="Login"/>
+					</form>
+				</div>
+				<div class="sep"></div>
+				<a class="brand" href="index.php?lang=en">Home</a>
+								<a href="index.php?lang=en">Flüüfff 2018</a>
+				<a href="about.php?lang=en">About</a>
+				<a href="attendees.php?lang=en">Attendees list</a>
+				<a href="app.php?lang=en">Smartphone Application</a>
+				<a class=" active" href="events.php?lang=en">Events</a>
+				<a href="hotel.php?lang=en">Hotel</a>
+				<a href="travel.php?lang=en">Travel Directions</a>
+				<a href="prices.php?lang=en">Prices</a>
+				<a href="faq.php?lang=en">FAQ</a>
+				<a href="policies.php?lang=en">Policies</a>
+				<a href="contact.php?lang=en">Contact</a>
+				<a href="links.php?lang=en">Other conventions</a>
+			</div>
+		</div>
+	</div>
+	<div class="language">
+		<div class="choice">
+			<span class="lang current"><span data-lang="en"></span></span>
+			<a class="lang  active" href="/events.php?lang=fr"><span data-lang='fr'>FR</span></a>
+			<a class="lang active active" href="/events.php?lang=en"><span data-lang='en'>EN</span></a>
+			<a class="lang  active" href="/events.php?lang=nl"><span data-lang='nl'>NL</span></a>
+		</div>
+	</div>
+	<div class="vspace"></div>
+	<div class='container main'>
+
+<h1>Events</h1>
+<!-- Tach was here-->
+<p>
+  Here is the forecast of the events, as for the weathers things might change before the convention starts.
+</p>
+<p>
+  No worries if your &mdash;finally not so waterproof&mdash; phone fell in the ocean, any events canceled, rescheduled or added at last minute will be displayed
+  on a white board in the Bar Area.
+</p>
+<p>
+	Also if you like to do more than making sand castles or tanning on the beach and have the spirit of a nice animator feel free to contact <a href="mailto:events@fluufff.org">events@fluufff.org</a> to propose some animations or pannels.
+</p>
+<h4>2 November</h4>
+<div class="table-responsive">
+  <table class="table eventTable">
+    <thead>
+      <tr>
+        <td>
+          Hour
+        </td>
+        <td>
+          Mainstage
+        </td>
+        <td>
+          Dealers Den
+        </td>
+        <td>
+          Games Area
+        </td>
+        <td>
+          Fursuit Lounge
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          15:00
+        </td>
+        <td rowspan="2">
+        </td>
+        <td rowspan="3">
+        </td>
+        <td rowspan="3">
+        </td>
+        <td class="IsEvent" rowspan="10">
+          <a href="#FursuitLounge">Fursuit Lounge</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          16:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          17:00
+        </td>
+  			<td class="IsEvent">
+          <a href="#OpeningCeremony">Opening Ceremony</a>
+  			</td>
+      </tr>
+      <tr>
+        <td>
+          18:00
+        </td>
+        <td rowspan="2" colspan="3">
+          Dinner
+        </td>
+      </tr>
+      <tr>
+        <td>
+          19:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          19:30
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          20:00
+        </td>
+        <td class="IsEvent">
+          <a href="#FirstCon">Your First Convention</a>
+        </td>
+        <td rowspan="4" colspan="2" class="IsEvent">
+          <a href="#GamesNight">Games Night</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          21:00
+        </td>
+        <td rowspan="4" class="IsEvent">
+          <a href="#Lounge">Lounge</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          22:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          23:00
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>3 November</h4>
+<div class="table-responsive">
+  <table class="table tableResponsive eventTable">
+    <thead>
+      <tr>
+        <td>
+          Hour
+        </td>
+        <td>
+          Mainstage
+        </td>
+        <td>
+          Dealers Den
+        </td>
+        <td>
+          Minigolf
+        </td>
+        <td>
+          Dunes
+        </td>
+        <td>
+          Bar area
+        </td>
+        <td>
+          Fursuit Lounge
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          8:00
+        </td>
+        <td colspan="8" rowspan="1">
+          Breakfast
+        </td>
+      </tr>
+      <tr>
+        <td>
+          9:00
+        </td>
+        <td rowspan="9"></td>
+        <td></td>
+        <td rowspan="5"></td>
+        <td rowspan="3"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          10:00
+        </td>
+        <td class="IsEvent">
+          <a href="#Electronics">Electronics Talk</a>
+        </td>
+        <td rowspan="2" class="IsEvent">
+          <a href="#Waffle">Waffle Panel</a>
+        </td>
+
+        <td rowspan="16" class="IsEvent">
+          <a href="#FursuitLounge">Fursuit Lounge</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          11:00
+        </td>
+  			<td class="IsEvent">
+          <a href="#Electronics">Electronics Workshop</a>
+        </td>
+      </tr>
+        <td>
+          12:00
+        </td>
+  			<td rowspan="2">
+
+        </td>
+        <td class="IsEvent">
+          <a href="#GroupPicture">Group Picture</a>
+        </td>
+        <td rowspan="6">
+
+        </td>
+      <tr>
+        <td>
+          13:00
+        </td>
+        <td class="IsEvent">
+          <a href="#Photoshoot">Photoshoot</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          14:00
+        </td>
+        <td rowspan="3" class="IsEvent">
+          <a href="#DealersDen">Dealers Den</a>
+        </td>
+        <td rowspan="2" class="IsEvent">
+          <a href="#FursuitMinigolf">Fursuit Minigolf</a>
+        </td>
+        <td rowspan="4">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          15:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          16:00
+        </td>
+        <td rowspan="2">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          17:00
+        </td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          18:00
+        </td>
+        <td rowspan="2" colspan="5">
+          Dinner
+        </td>
+      </tr>
+      <tr>
+        <td>
+          19:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          19:30
+        </td>
+        <td rowspan="3">
+        </td>
+        <td>
+        </td>
+        <td rowspan="9">
+        </td>
+        <td rowspan="9">
+        </td>
+        <td rowspan="9">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          20:00
+        </td>
+        <td rowspan="3" class="IsEvent">
+  				<a href="#GamesNight">Games Night</a>
+  			</td>
+      </tr>
+      <tr>
+        <td>
+          21:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          22:00
+        </td>
+        <td rowspan="6" class="IsEvent">
+          <a href="#Dance">Dance</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          23:00
+        </td>
+  			<td rowspan="5">
+  			</td>
+      </tr>
+      <tr>
+        <td>
+          00:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          01:00
+        </td>
+        <td rowspan="3">
+          Closed
+        </td>
+      </tr>
+      <tr>
+        <td>
+          02:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          03:00
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>4 November</h4>
+<div class="table-responsive">
+  <table class="table eventTable">
+    <thead>
+      <tr>
+        <td>
+          Hour
+        </td>
+        <td>
+          Mainstage
+        </td>
+        <td>
+          Dealers Den
+        </td>
+        <td>
+          Minigolf
+        </td>
+        <td>
+          Bar area
+        </td>
+        <td>
+          Fursuit Lounge
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          8:00
+        </td>
+        <td rowspan="2" colspan="8">
+  				Breakfast
+        </td>
+      </tr>
+      <tr>
+        <td>
+          9:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10:00
+        </td>
+        <td rowspan="3" class="IsEvent">
+          <a href="#BrewIt">Brew It Yourself</a>
+        </td>
+        <td rowspan="2" class="IsEvent">
+          <a href="#CreativeWriting">Creative writing</a>
+        </td>
+        <td rowspan="3">
+
+        </td>
+        <td rowspan="5">
+
+        </td>
+        <td rowspan="17" class="IsEvent">
+          <a href="#FursuitLounge">Fursuit Lounge</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          11:00
+        </td>
+      </tr>
+        <td>
+          12:00
+        </td>
+  			<td class="IsEvent">
+  				<a href="#ChainmailCrafting">Chainmail crafting</a>
+  			</td>
+      <tr>
+        <td>
+          13:00
+        </td>
+        <td>
+        </td>
+  			<td>
+  			</td>
+        <td rowspan="4" class="IsEvent">
+          <a href="#FursuitMinigolf">Fursuit Minigolf</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          14:00
+        </td>
+        <td rowspan="4">
+
+        </td>
+        <td rowspan="4" class="IsEvent">
+          <a href="#DealersDen">Dealers Den</a>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          15:00
+        </td>
+        <td class="IsEvent">
+          <a href="#WAC!">What A Choc!</a>
+        </td>
+      </tr>
+      <tr>
+  			<td rowspan="2" class="IsEvent"><em>15:30</em> <a href="#SnackExchange">Snack exchange</a></td>
+  		</tr>
+      <tr>
+        <td>
+          16:00
+        </td>
+        <td rowspan="2">
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          17:00
+        </td>
+        <td class="IsEvent">
+          <a href="#FursuitOlympics">Fursuit Olympics</a>
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+      </tr>
+      <tr>
+        <td>
+          18:00
+        </td>
+        <td rowspan="2" style="border-right-width: 0;">
+  				Dinner
+        </td>
+  			<td style="border-left-width: 0; border-right-width: 0;">
+
+  			</td>
+  			<td rowspan="2" colspan="2" style="border-left-width: 0;">
+  				Dinner
+        </td>
+      </tr>
+      <tr>
+        <td>
+          19:00
+        </td>
+        <td rowspan="5" class="IsEvent">
+          <a href="#GamesNight">Games Night</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          19:30
+        </td>
+        <td rowspan="3">
+        </td>
+        <td rowspan="7">
+        </td>
+  			<td rowspan="7">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          20:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          21:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          22:00
+        </td>
+        <td rowspan="4" class="IsEvent">
+          <a href="#Karawoooooooke">Stage Games</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          23:00
+        </td>
+        <td rowspan="3">
+          Closed
+        </td>
+      </tr>
+      <tr>
+        <td>
+          00:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          01:00
+        </td>
+        <td>
+          Closed
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h4>5 November</h4>
+<div class="table-responsive">
+  <table class="table eventTable">
+    <thead>
+      <tr>
+        <td>
+          Hour
+        </td>
+        <td>
+          Mainstage
+        </td>
+        <td>
+          Dealers Den
+        </td>
+        <td>
+          Fursuit Lounge
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          8:00
+        </td>
+        <td rowspan="2" colspan="4" id="IsEvent">
+          Breakfast
+        </td>
+      </tr>
+      <tr>
+        <td>
+          9:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          10:00
+        </td>
+        <td class="IsEvent">
+          Closing Ceremony
+        </td>
+        <td rowspan="7">
+          Closed
+        </td>
+        <td rowspan="7" class="IsEvent">
+          <a href="#FursuitLounge">Fursuit Lounge</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          11:00
+        </td>
+        <td rowspan="6">
+        </td>
+      </tr>
+      <tr>
+        <td>
+          12:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          13:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          14:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          15:00
+        </td>
+      </tr>
+      <tr>
+        <td>
+          16:00
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<h3>Events description</h3>
+<h4 id="BrewIt">"BREW IT YOURSELF" (BIY)</h4>
+<p class="eventTime">4 hours</p>
+<p>You like beer, We like beer! And guess what? We also brew our own! Let us share with you some of its secrets and introduce you to homebrewing, a hobby in full expansion.</p>
+
+<h4 id="ChainmailCrafting">CHAINMAIL CRAFTING</h4>
+<p>Maille, the mythical material that spanned centuries, cultures and civilizations! Come 'n join us as we explore its history, the many shapes, sizes and secrets of this versatile metal craftsmanship!</p>
+
+<h4 id="CreativeWriting">CREATIVE WRITING WORKSHOP : Tails From The Sea Story Circle</h4>
+<p class="eventTime">2 hours</p>
+<p>What's better then kicking-back on the beach with a cool drink in reach, dozing-off in the shade while the waves roll their sweet lullaby? Maybe it's the whispers of ancient heroes and fierce monsters, of tall ships and great battles that carry on the breeze and speak on the brink of sleep. As the night falls, bring your towel to our bonfire and share your visions of nautical daring do, poems on the love of a whale for a misguided sailor, and wild surf adventures in far-flung places!</p>
+
+<h4 id="Dance">DANCE</h4>
+<p class="eventTime">6 hours</p>
+<p>Bounce to the Dingding and the Papow, shake to the Tzing and jump to the Boom boom.</p>
+
+<h4 id="DealersDen">DEALERS DEN</h4>
+<p class="eventTime">Friday: 3 hours; Saturday: 3 hours</p>
+<p>Buy, sell and commission art from furry artists.</p>
+
+<h4 id="Electronics">ELECTRONICS WORKSHOP: Silly Electronics For Fun And Absolutely no Profit</h4>
+<p class="eventTime">2 hours</p>
+<p>Lights! Noises! What good is a beach party without bling and squawks? Learn the basics of the electronics needed to pimp your party hat and control it all with an Arduino board, just like the cool kids do. We'll also teach you how to it without setting your own tail on fire, bonus and for . Then, after the presentation, bring-along your inner geek to our hands-on workshop and solder your own contraption together to take home. Learn mad skillz and how to not tattoo your own paws with a soldering iron. (Limited seats, registration after the presentation.)</p>
+
+<h4 id="FursuitLounge">FURSUIT LOUNGE</h4>
+<p>A must-go for all fursuiters after some warm and exhausting exercise. There you can rest and cool off while the fans take care of your suit.</p>
+<h4 id="FursuitMinigolf">FURSUIT MINIGOLF</h4>
+<p class="eventTime">Friday: 2 hours or Saturday: 3 hours</p>
+<p>Who needs depth-perception when you like a challenge? Will be organized the 3rd or the 4th in case of bad weather.</p>
+
+<h4 id="FursuitOlympics">FURSUIT OLYMPICS</h4>
+<p class="eventTime">1 hour</p>
+<p>When Olympics contests and Giant Critters mix together. </p>
+
+<h4 id="GamesNight">GAMES NIGHT</h4>
+<p class="eventTime">4 hours</p>
+<p>Boardgames and videogames available to everyone in the dealer’s den room and in front of the bar. Retrogaming and good old tabletop role playing game will also be part of the party.</p>
+
+<h4 id="GroupPicture">GROUP PICTURE</h4>
+<p>We all gather for a souvenir picture! Keep an eye on the white board for the exact location.</p>
+
+<h4 id="Karawoooooooke">STAGE GAMES</h4>
+<p class="eventTime">4 hours</p>
+<p>A place where you can be and express yourself. Don’t just watch the show, be the show! On the menu: games, dance, music and comedy.</p>
+
+<h4 id="Lounge">LOUNGE</h4>
+<p class="eventTime">4 hours</p>
+<p>A comfy evening for proper chat and icebreaking organized in the area of the main stage. Drinks and chilled live music performed by “SynPlex”.</p>
+
+<h4 id="OpeningCeremony">OPENING CEREMONY</h4>
+<p class="eventTime">1 hour</p>
+<p>Little speech to welcome the attendees, present the staff and explain a few organization points about the convention.</p>
+
+<h4 id="Photoshoot">PHOTOSHOOT</h4>
+<p>For those who are interested, some photographers will stick around to snap you in the dunes. Fursuiters welcome.</p>
+
+<h4 id="SnackExchange">SNACK EXCHANGE (and Belgian Chocolates)</h4>
+<p class="eventTime">1 hour 30 minutes</p>
+<p>Bring your own snacks and share with your fluffy friends. Bonus points for regional specialities. Flüüfff also gives you the opportunity to taste Belgian Chocolates</p>
+
+<h4 id="Waffle">WAFFLE PANEL</h4>
+<p class="eventTime">2 hours</p>
+<p>There is more than one kind of Waffle. Follow the Waffle Devouring Dinosaur and learn about the main different waffle varieties in Belgium. After, enjoy a free tasting session at the bar!</p>
+
+<h4 id="WAC!">WHAT A CHOC!</h4>
+<p class="eventTime">30 minutes</p>
+<p>Fun fact: did you know that Belgium is the sweet heaven of chocolate? Whether or not this citation from Einstein on the Internet is true, attend this panel to learn more about Belgian chocolates. Just after this panel and during the snack exchange, you’ll be offered a taste of Belgian chocolates, too!</p>
+
+<h4 id="FirstCon">YOUR FIRST CONVENTION</h4>
+<p class="eventTime">1 hour</p>
+<p>Is it a first time for you? Here's everything you have to know to enjoy your first convention a 100%!</p>
+<!--/Tach was here-->
+
+	</div>
+	<div data-delete="true">&nbsp;</div>
+	<nav class="navbar footer navbar-default">
+		<div class="container">
+			<div class="col-md-12">
+				<div class="navbar-header">
+					<a class="navbar-brand small-logo" href="index.php?lang=en"><img class="small-logo" alt="Flüüfff" src="pics/logo-light.svg" /></a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<ul class="nav navbar-nav">
+					<li><a href="https://www.corsendonkhotels.com/en/clubs/duinse-polders/">Corsendonk <span class="name">Duinse Polders</span> hotel</a></li>
+					<li><a>Blankenberge, Belgium</a></li>
+					<li><a>2nd to the 5th of November</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<ul class="nav navbar-nav">
+					<li><a href="policies.php?lang=en">Policies</a></li>
+					<li><a href="https://2018.fluufff.org/">Flüüfff 2018</a></li>					<li><a href="faq.php?lang=en">FAQ</a></li>
+					<li><a href="contact.php?lang=en">Contact</a></li>
+					<li><a href="links.php?lang=en">Other conventions</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<div class="vspace hidden-xs"></div>
+				<a href="https://twitter.com/FluufffCon"><img alt="Twitter" src="style/images/twitter.svg"></a>
+				&nbsp;&nbsp;
+				<a href="http://www.furaffinity.net/user/fluufff/"><img alt="FurAffinity" src="style/images/furaffinity.png"></a>
+				&nbsp;&nbsp;
+				<a href="https://www.facebook.com/fluufff/"><img alt="Facebook" src="style/images/facebook.svg"></a>
+				&nbsp;&nbsp;
+				<a href="https://beta.furrynetwork.com/fluufff/"><img alt="FurryNetwork" src="style/images/furrynetwork.svg"></a>
+				&nbsp;&nbsp;
+				<a href="https://web.telegram.org/#/im?p=@fluufff_announcements"><img alt="Telegram" src="style/images/telegram.png"></a>
+				<div class="vspace"></div>
+			</div>
+		</div>
+	</nav>
+</body>
+</html>

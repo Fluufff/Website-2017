@@ -1,0 +1,504 @@
+/** General **/
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto Slab";
+	/* Verdana, "Bitstream Vera Sans", "DejaVu Sans", Tahoma, Geneva, Arial, Sans-serif; */
+	font-size: 22px;
+	color: #635c4a;
+	color: #ccc;
+	background-image: url("images/bg.jpg");
+	background-repeat: repeat-y;
+	background-size: 100% auto;
+	background-attachment: fixed;
+	background-color: #a8f0ed; /* sky  */
+	background-color: #e68067; /* sand */
+}
+
+img.brand.fluufff {
+	margin-left: calc((300px - 215px) / 2);
+	margin-top: 30px;
+}
+
+@media(orientation: portrait) {
+	body { background-image: url("images/bg-vert.jpg"); }
+}
+
+h1, h2, h3, h4, h5 {
+	color: white;
+}
+
+
+h1 { font-size: 50px; padding-top: 30px; }
+h2 { font-size: 34px; }
+h3 { font-size: 28px; }
+
+.form-label { }
+.form-label.right { float: right; }
+.form-label.dark { color: black; }
+
+.form-control {
+	color: white;
+	background-color: transparent;
+}
+
+.form-control.dark { color: black; }
+
+/* Non-firefox (or select-non-native) browsers: */
+select.form-control option {
+	color: white;
+	background-color: black;
+}
+select.form-control.dark option {
+	color: black;
+	background-color: white;
+}
+
+.form-button { color: black; }
+.form-button.max { width: 100%; }
+
+img.small-logo { width: 150px; visibility: hidden; }
+.navbar-brand.small-logo { height: 100px; }
+
+.highlight {
+	color: #42C1B2;
+	font-weight: bold;
+}
+
+.author {
+	float: right;
+	font-weight: bold;
+}
+
+.author:before {
+	content: "— ";
+}
+
+.script, .invisible {
+	display: none !important;
+}
+
+.message, .error {
+	color: black;
+	clear: left;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 5px;
+	border: 1px solid;
+	text-align: center;
+}
+
+.message {
+	background-color: #ddffdd;
+	border-color: #88dd88;
+}
+
+.error {
+	background-color: #ffdddd;
+	border-color: #dd8888;
+}
+
+.container.main, .container-fluid.main {
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 30px;
+	padding: 20px;
+	margin-top: 100px;
+	position: relative;
+	left: 0px;
+	transition: left 0.5s;
+}
+
+@media(min-width: 768px)  { .container.main, .container-fluid.main { padding: 20px 40px 20px 40px; } }
+@media(min-width: 992px)  { .container.main, .container-fluid.main { padding: 20px 60px 20px 60px; } }
+@media(min-width: 1200px) { .container.main, .container-fluid.main { padding: 20px 80px 20px 80px; } }
+
+@media(max-width: 849px) { .dropdown .dropbtn { margin-left: 0; margin-top: 0; } }
+
+/* min width = 400 (size of pic) + 2 * 30 (border radius) */
+@media(min-width: 460px) {
+.container.main:before, .container-fluid.main:before {
+		background-image: url("images/shape.svg");
+		background-repeat: no-repeat;
+		opacity: 0.7;
+		content: " ";
+		position: absolute;
+		margin-top: -100px;
+		height: 100px;
+		width: 400px;
+		top: 0;
+		right: 0;
+	}
+}
+
+.navbar {
+	margin-bottom: 0;
+	background-color: rgba(255, 255, 255, 0.7);
+	background-color: transparent;
+	border: none;
+}
+
+.navbar.footer .navbar-brand {
+	color: white;
+}
+
+.navbar.footer li, .navbar.footer .navbar-header {
+	float: none;
+}
+
+.navbar.footer {
+	width: 100%;
+	background-image: url('images/nothingness-verti.png');
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+}
+
+.vspace {
+	height: 24px;
+}
+
+.vspace[data-size=max] {
+	height: calc(100% - 240px);
+}
+
+.vspace[data-size=max] {
+	background-image: url('../pics/stamp.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto 85%;
+	min-size: 300px;
+}
+
+@media(min-width: 768px)  { .vspace[data-size=max] { margin-right: 200px; } }
+
+[data-delete=true] {
+	display: none;
+}
+
+.tabpane {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.field-value {
+	display: block;
+	font-family: monospace;
+	font-size: 130%;
+}
+
+/** Icons **/
+
+.icon {
+	width: 48px;
+	height: 48px;
+	display: block;
+	background-repeat: no-repeat;
+}
+
+.center-icon {
+	width: 48px;
+	height: 48px;
+	display: block;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: calc(50% - 24px);
+	left: calc(50% - 24px);
+}
+
+.icon-menu { background-image: url("images/menu.png"); background-position: center; }
+.icon-left { background-image: url("images/left.png"); }
+.icon-right { background-image: url("images/right.png"); }
+
+/** Dropdown **/
+
+/* Dropdown Button */
+.dropbtn {
+	color: white;
+	padding: 24px;
+	/* ugly menu background */
+	padding: 28px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	margin-left: 50px;
+	margin-top: 50px;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 10px;
+}
+
+.dropbtn:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	/* ugly menu background */
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	position: fixed;
+	display: inline-block;
+	height: 100%;
+}
+
+.main-menu {
+	z-index: 100;
+	width: 0;
+	float: left;
+}
+
+@media(max-width: 299px) {
+	.main-menu:before {
+		content: "This website is not intended to be viewed on a browser with less than 300px horizontal space -- you may want to turn off the CSS styles on your browser.";
+		margin-top: 50px;
+		color: red;
+		z-index: -1;
+		position: absolute;
+		text-shadow: 2px 1px 0px black;
+		background-color: rgba(0, 0, 0, 0.7);
+		height: calc(100% - 50px);
+		overflow-y: scroll;
+	}
+
+	.language {
+		display: none !important;
+	}
+}
+
+.dropdown .logoff-button {
+	position: absolute;
+	display: block;
+	display: none;
+	left: 320px;
+	color: black;
+	margin-top: 50px;
+}
+
+.dropdown .close-button.area {
+	display: none;
+	position: fixed;
+	width: calc(100% - 300px);
+	left: 300px;
+	height: 100%;
+}
+
+.dropdown .close-button.X {
+	display: none;
+	position: absolute;
+	left: 300px;
+	width: calc(100% - 300px);
+	color: black;
+	height: calc(100% - 100px);
+}
+
+.dropdown .close-button:hover {
+	background-color: transparent;
+}
+
+@media(max-width: 480px) {
+	.dropdown .close-button.X { display: none; }
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	position: absolute;
+	display: block;
+	float: left;
+	padding: 0;
+	margin-top: -98px;
+	/* ugly menu background */
+	margin-top: -106px;
+	width: 100%;
+	height: 100%;
+	margin-left: -500px;
+}
+
+@media(max-width: 849px) {
+	.dropdown-content {
+		margin-top: -48px;
+	}
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-size: 30px;
+	color: #444;
+}
+
+.dropdown-content .signup {
+	color: #888;
+	background-color: black;
+	font-size: 30px;
+	text-align: center;
+	margin: 30px;
+	margin-bottom: 5px;
+}
+
+.dropdown-content .reset {
+	color: blue;
+	font-size: 10px;
+	text-align: right;
+	padding: 0;
+	padding-right: 5px;
+}
+
+.dropdown-content .loginbox {
+	padding: 40px;
+	padding-top: 20px;
+	padding-bottom: 0;
+	z-index: 50;
+	position: relative;
+	background-color: white;
+}
+
+.dropdown-content .loginbox * {
+	float: none;
+	display: block;
+}
+
+.dropdown-content a.brand {
+	font-weight: bold;
+	font-size: 30px;
+	color: black;
+}
+
+.sep {
+	background-color: gray;
+	height: 3px;
+	width: 260px;
+	margin: 30px 20px 20px 20px
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+
+.dropbtn:focus + .dropdown-content,
+.dropdown:active .dropdown-content:not(:active),
+.dropdown .dropdown-content:hover,
+.dropdown:hover + .dropdown-content {
+	display: block;
+	margin-left: 0;
+}
+
+.dropdown-content:hover .close-button.area:not(:active),
+.dropdown-content .close-button.area:hover:not(:active) {
+	display: block;
+}
+
+.dropdown .dropdown-content .pane {
+	width: 0;
+	transition: width 0.1s;
+	overflow: hidden;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	margin-bottom: 100px;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.dropbtn:focus + .dropdown-content .pane,
+.dropdown:active .dropdown-content .pane,
+.dropdown .dropdown-content:hover .pane {
+	display: block;
+	width: 300px;
+	transition: width 0.1s;
+	background-color: #f9f9f9;
+}
+
+/*.dropdown:hover ~ .main {
+	left: 300px;
+	transition: left 0.5s ease-out;
+}*/
+
+/** register, user icon */
+.dropdown .user-name {
+	float: right;
+	height: 48px;
+	margin-right: 22px;
+}
+
+.dropdown .user-name > p {
+	color: black;
+	position: relative;
+	margin: 0;
+	word-wrap: break-word;
+	max-width: 250px;
+}
+
+.dropdown .user-icon, .user-icon img {
+	margin: 0;
+	padding: 0;
+	height: auto;
+	width: 300px;
+}
+
+/** Active links **/
+a.active:not(.tab_title), .active a:not(.tab_title) {
+	background-color: transparent !important; /* override bootstrap */
+	font-weight: bold;
+}
+
+a.active:hover:not(.tab_title), .active:hover a:not(.tab_title) {
+	background-color: transparent !important; /* override bootstrap */
+	font-weight: bold;
+}
+
+.navbar.footer .nav a { color: #ccc !important; }
+.navbar.footer .nav a:hover { color: white !important; }
+
+
+/** Language **/
+
+.language {
+	opacity: 0; /* No languages anymore, English only :(  */
+	display: block;
+	float: right;
+	width: 48px;
+	height: 48px;
+	margin: 50px;
+	/* over main, under menu: */
+	position: relative;
+	z-index: 90;
+}
+
+.language .lang, .language .lang span {
+	color: transparent !important;
+	text-decoration: none !important;
+	width: 48px;
+	height: 48px;
+	display: block;
+	float: left;
+}
+
+.language .choice {
+	visibility: hidden;
+}
+
+.language:hover .choice, .language .choice .current.lang {
+	visibility: visible;
+}
+
+.language .active.lang {
+	display: none;
+}
+
+.language [data-lang] {
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+.language [data-lang]:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.language [data-lang=fr] { background-image: url("images/fr.png"); }
+.language [data-lang=en] { background-image: url("images/en.png"); }
+.language [data-lang=nl] { background-image: url("images/nl.png"); }
